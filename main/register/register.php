@@ -17,17 +17,26 @@ if (isset($_POST['submitbtn'])) {
 
     if (empty($username) || empty($email) || empty($password)) {
         echo "<p class='error'>Please fill in all the fields.</p>";
-    } else if ((isset($_POST['age']) && $_POST['age'] == '0')) {
+    } 
+    else if ((isset($_POST['age']) && $_POST['age'] == '0')) {
         echo "<p class='error'>Select an age group</p>";
-    } else if (!isset($_POST['confirm'])) {
+    } 
+    else if (!isset($_POST['confirm'])) {
         echo "<p class='error'>Agree to the terms and conditions</p>";
-    } else if (strlen($username) < 6) {
+    } 
+    else if (strlen($username) <6 ) {
         echo "<p class='error'>Username must be atleast 6 characters long</p>";
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } 
+    else if (!preg_match('/^[a-zA-Z]+$/', $username)) {
+        echo "<p class='error'>Username can only contain alphabets</p>";
+    }
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "<p class='error'>Invalid Email Address</p>";
-    } else if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)/', $password)) {
+    } 
+    else if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)/', $password)) {
         echo "<p class='error'>Password must contain at least one uppercase letter, lowercase letter and a number</p>";
-    } else {
+    } 
+    else {
 
         $password = md5($password);
 

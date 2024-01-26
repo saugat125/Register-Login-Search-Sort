@@ -67,4 +67,12 @@
     input[type="submit"]:hover {
         opacity: 0.8;
     }
+
+    .home{
+        color: grey;
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%,-50%);     
+    }
  

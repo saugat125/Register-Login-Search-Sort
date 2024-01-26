@@ -42,6 +42,9 @@ if (isset($_POST['submitbtn'])) {
         <div class="submit"><input type="submit" name="submitbtn" value="LOGIN"></div>
         <p class="already">Not registered? <a href="../register/register.php">Register</a></p>
     </form>
+    <a href="../../watIndex.php"></a>   
+    <p class="home"><a href="../../watIndex.php">HOME</a></p>
+
 </body>
 
 </html>

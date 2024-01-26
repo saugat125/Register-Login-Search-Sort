@@ -74,7 +74,15 @@ input[type="submit"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s;
 }
+.product:hover{
+    transform: scale(1.05);
+    overflow: hidden;
+}
+
 
 .image-container {
     text-align: center;
